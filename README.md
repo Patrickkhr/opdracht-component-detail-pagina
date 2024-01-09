@@ -58,7 +58,7 @@ https://nordhealth.design/components/icon/#integration
 
 ### Contactgegevens
 - Naam: Yolijn van der Kolk
-- Email: yolijn.vanderkolk@ictu.nl 
+- Email: yolijn@frameless.io
 - Slack: @Yolijn
 
 Aanvraag: 8-1-2024
@@ -69,7 +69,7 @@ Oplevering: 25-01-2024
 De opdrachtgever is Yolijn van der Kolk zij is een van de oprichters van het bedrijf Frameless zij werkt samen met haar team aan het NL-design system voor het gemeente van Utrecht. Yolijn helpt bedrijven met het bouwen van toegankelijke en gebruiksvriendelijke websites.
 
 ### Wat zijn de unique selling points?
-Zij hebben meerdere white-label design systems gemaakt die developers kunnen hergebruiken en waar ze hun eigen huisstijl aan kunnen toepassen. Er is een grote community binnen de NL-design waar er gewerkt wordt aan velen componenten die hergebruikt worden door developers en aan componenten die nog gemaakt moeten worden waar de community een hand bij aanbiedt.
+Frameless heeft meerdere white-label design systems gemaakt die developers kunnen hergebruiken en waar ze hun eigen huisstijl aan kunnen toepassen. Er is een grote community binnen de NL-design waar er gewerkt wordt aan velen componenten die hergebruikt worden door developers en aan componenten die nog gemaakt moeten worden waar de community een hand bij aanbiedt.
 
 ### Opdrachtomschrijving:
 Het is de bedoeling dat ik de componenten detail pagina ga ontwikkelen zodat het voor de gebruiker inzichtelijker wordt wat hij nodig heeft, wat de status van het component is en hoe ver het component is met de Definition of Done.  
