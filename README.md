@@ -58,7 +58,7 @@ https://nordhealth.design/components/icon/#integration
 
 ### Contactgegevens
 - Naam: Yolijn van der Kolk
-- Email adres: yolijn.vanderkolk@ictu.nl 
+- Email: yolijn.vanderkolk@ictu.nl 
 - Slack: @Yolijn
 
 Aanvraag: 8-1-2024
