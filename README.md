@@ -53,3 +53,34 @@ https://nordhealth.design/components/icon/#integration
 - De tabs zijn sticky
 - Als er teveel tabs zijn om in 1x te tonen is het menu responsive zoals bij https://ux.mailchimp.com/patterns/feedback#toaster
 - Een tab selecteren zorgt voor scroll naar het geselecteerde element
+
+# Debriefing Frameless gemeente Utrecht
+
+### Contactgegevens
+- Naam: Yolijn van der Kolk
+- Email adres: yolijn.vanderkolk@ictu.nl 
+- Slack: @Yolijn
+
+Aanvraag: 8-1-2024
+
+Oplevering: 25-01-2024
+
+### Wie is de opdrachtgever?
+De opdrachtgever is Yolijn van der Kolk zij is een van de oprichters van het bedrijf Frameless zij werkt samen met haar team aan het NL-design system voor het gemeente van Utrecht. Yolijn helpt bedrijven met het bouwen van toegankelijke en gebruiksvriendelijke websites.
+
+### Wat zijn de unique selling points?
+Zij hebben meerdere white-label design systems gemaakt die developers kunnen hergebruiken en waar ze hun eigen huisstijl aan kunnen toepassen. Er is een grote community binnen de NL-design waar er gewerkt wordt aan velen componenten die hergebruikt worden door developers en aan componenten die nog gemaakt moeten worden waar de community een hand bij aanbiedt.
+
+### Opdrachtomschrijving:
+Het is de bedoeling dat ik de componenten detail pagina ga ontwikkelen zodat het voor de gebruiker inzichtelijker wordt wat hij nodig heeft, wat de status van het component is en hoe ver het component is met de Definition of Done.  
+
+De secties, tabs voor tonen van voorbeeld per programmeertaal en checklist sectie voor Definition of Done hebben hogere prioriteit en worden graag als eerst gemaakt. 
+
+Voor de sectie tabs voor tonen van voorbeeld per programmeertaal is het belangrijk dat als de tabs te lang worden er in kleinere viewports een selectbox gemaakt wordt waar de gebruiker uit de verschillende tabs kan kiezen.
+Voor de checklist sectie voor Definition of Done is het belangrijk dat het voor de gebruiker duidelijk is waar en wat de status van het component is. Ook is er vrijheid in het designen van deze sectie.
+
+Verder is het belangrijk dat ik tijdens het bouwen de huisstijl van gemeente Utrecht hanteer en dat ik gebruik maak van custom properties zodat Frameless later ook de huisstijlen van andere projecten erop kan toepassen. Mocht er nog tijd over zijn dan kan ik de sectie tabs voor scroll-navigatie gaan ontwikkelen.
+
+### Oplevering:
+Een volledige componenten detail pagina met prioriteit op de aangegeven secties: tabs voor tonen van voorbeeld per programmeertaal en de checklist sectie voor Definition of Done. De pagina is gemaakt met custom properties en vormgegeven met de huisstijl van gemeente Utrecht.
+
