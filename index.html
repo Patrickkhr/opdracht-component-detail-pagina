@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <meta http-equiv="content-security-policy" content="">
+    <script src="scripts/script.js" defer></script>
+    <title>Button component</title>
+</head>
+
+<body>
+
+  <section class="headingContainer">
+    <h1>Button</h1>
+    <p><span class="statusLabel">Community</span></p>
+    <p>Button worden gebruikt om acties uit te voeren.</p>
+    <p><span class="bold">Ook bekend als:</span> Boeton, Beton, Nottub of knoppie.</p>
+    <p><span class="bold">Gerelateerde componenten:</span> <a href="#">Link als button</a>, <a href="#">Destructive Button</a>, <a href="#">Button groep</a></p>
+    <p><span class="bold">Bijvoorbeeld gebruikt in:</span> <a href="#">Open Formulieren</a>, <a href="#">Huwelijksplanner</a> en <a href="#">Eigen Template</a></p> 
+  </section>
+
+  <section class="codeContainer">
+    <h2>Voorbeeld</h2>
+    <div class="tabs">
+      <button class="tablinks active" onclick="openTab(event, 'CSS')">CSS</button>
+      <button class="tablinks" onclick="openTab(event, 'HTML')">HTML</button>
+      <button class="tablinks" onclick="openTab(event, 'Webcomponent')">Webcomponent</button>
+      <button class="tablinks" onclick="openTab(event, 'Vue')">Vue</button>
+      <button class="tablinks" onclick="openTab(event, 'React')">React</button>
+      <button class="tablinks" onclick="openTab(event, 'Figma')">Figma</button>
+      <select onchange="openTab(event, this.value)">
+        <option value="CSS">CSS</option>
+        <option value="HTML">HTML</option>
+        <option value="Webcomponent">Webcomponent</option>
+        <option value="Vue">Vue</option>
+        <option value="React">React</option>
+        <option value="Figma">Figma</option>
+      </select>
+    </div>
+    
+    <div class="tabsWrapper">
+
+      <div id="CSS" class="tabcontent" style="display: block;">
+        <div class="buttonTab">
+          <button class="utrecht-button">Label</button>
+        </div>
+        <div class="codeTab">
+          <pre><code class="copy-html"><span><</span>button class="utrecht-button" type="button"<span>></span>
+            label
+          <span><</span>/button<span>></span></code></pre>
+          <button onclick="copyToClipboard('#CSS .codeTab code', this)">Kopieer</button>
+        </div>
+        <div class="npmTab">
+          <p class="npmCopy">npm install @NLDS Button</p>
+          <button onclick="copyToClipboard('#CSS .npmTab .npmCopy', this)">Kopieer</button>
+        </div>
+        <div class="linksTab">
+          <a href="#"><img src="images/external-link.svg" alt="">Bekijk in storybook</a>
+          <a href="#"><img src="images/external-link.svg" alt="">Bekijk in github</a>
+          <a href="#"><img src="images/external-link.svg" alt="">Changelog</a>
+        </div>
+      </div>
+
+      <div id="HTML" class="tabcontent">
+        <div class="buttonTab">
+          <button class="utrecht-button">Label1</button>
+        </div>
+        <div class="codeTab">
+          <pre><code><span><</span>button class="utrecht-button" type="button"<span>></span>
+            label1
+          <span><</span>/button<span>></span></code></pre>
+          <button onclick="copyToClipboard('#HTML .codeTab code', this)">Kopieer</button>
+        </div>
+        <div class="npmTab">
+          <p class="npmCopy">npm install @NLDS Button1</p>
+          <button onclick="copyToClipboard('#HTML .npmTab .npmCopy', this)">Kopieer</button>
+        </div>
+        <div class="linksTab">
+          <a class="singleLink" href="#"><img src="images/external-link.svg" alt="">Bekijk in storybook</a> 
+          <a class="singleLink" href="#"><img src="images/external-link.svg" alt="">Bekijk in github</a> 
+          <a class="singleLink" href="#"><img src="images/external-link.svg" alt="">Changelog</a>
+        </div>
+      </div>
+
+      <div id="Webcomponent" class="tabcontent">
+        <div class="buttonTab">
+          <button class="utrecht-button">Label2</button>
+        </div>
+        <div class="codeTab">
+          <pre><code><span><</span>button class="utrecht-button" type="button"<span>></span>
+            label2
+          <span><</span>/button<span>></span></code></pre>
+          <button onclick="copyToClipboard('#Webcomponent .codeTab code', this)">Kopieer</button>
+        </div>
+        <div class="npmTab">
+          <p class="npmCopy">npm install @NLDS Button2</p>
+          <button onclick="copyToClipboard('#Webcomponent .npmTab .npmCopy', this)">Kopieer</button>
+        </div>
+        <div class="linksTab">
+          <a class="singleLink" href="#"><img src="images/external-link.svg" alt="">Bekijk in storybook</a>
+          <a class="singleLink" href="#"><img src="images/external-link.svg" alt="">Bekijk in github</a>
+          <a class="singleLink" href="#"><img src="images/external-link.svg" alt="">Changelog</a>
+        </div>
+      </div>
+
+      <div id="Vue" class="tabcontent">
+        <div class="buttonTab">
+          <button class="utrecht-button">Label3</button>
+        </div>
+        <div class="codeTab">
+          <pre><code><span><</span>button class="utrecht-button" type="button"<span>></span>
+            label3
+          <span><</span>/button<span>></span></code></pre>
+          <button onclick="copyToClipboard('#Vue .codeTab code', this)">Kopieer</button>
+        </div>
+        <div class="npmTab">
+          <p class="npmCopy">npm install @NLDS Button3</p>
+          <button onclick="copyToClipboard('#Vue .npmTab .npmCopy', this)">Kopieer</button>
+        </div>
+        <div class="linksTab">
+          <a class="singleLink" href="#"><img src="images/external-link.svg" alt="">Bekijk in storybook</a>
+          <a class="singleLink" href="#"><img src="images/external-link.svg" alt="">Bekijk in github</a>
+          <a class="singleLink" href="#"><img src="images/external-link.svg" alt="">Changelog</a>
+        </div>
+      </div>
+
+      <div id="React" class="tabcontent">
+          <div class="buttonTab">
+          <button class="utrecht-button">Label4</button>
+        </div>
+        <div class="codeTab">
+          <pre><code><span><</span>button class="utrecht-button" type="button"<span>></span>
+            label4
+          <span><</span>/button<span>></span></code></pre>
+          <button onclick="copyToClipboard('#React .codeTab code', this)">Kopieer</button>
+        </div>
+        <div class="npmTab">
+          <p class="npmCopy">npm install @NLDS Button4</p>
+          <button onclick="copyToClipboard('#React .npmTab .npmCopy', this)">Kopieer</button>
+        </div>
+        <div class="linksTab">
+          <a class="singleLink" href="#"><img src="images/external-link.svg" alt="">Bekijk in storybook</a>
+          <a class="singleLink" href="#"><img src="images/external-link.svg" alt="">Bekijk in github</a>
+          <a class="singleLink" href="#"><img src="images/external-link.svg" alt="">Changelog</a>
+        </div>
+      </div>
+
+      <div id="Figma" class="tabcontent">
+        <div class="buttonTab">
+          <button class="utrecht-button">Label5</button>
+        </div>
+        <div class="codeTab">
+          <pre><code><span><</span>button class="utrecht-button" type="button"<span>></span>
+            label5
+          <span><</span>/button<span>></span></code></pre>
+          <button onclick="copyToClipboard('#Figma .codeTab code', this)">Kopieer</button>
+        </div>
+        <div class="npmTab">
+          <p class="npmCopy">npm install @NLDS Button5</p>
+          <button onclick="copyToClipboard('#Figma .npmTab .npmCopy', this)">Kopieer</button>
+        </div>
+        <div class="linksTab">
+          <a class="singleLink" href="#"><img src="images/external-link.svg" alt="">Bekijk in storybook</a>
+          <a class="singleLink" href="#"><img src="images/external-link.svg" alt="">Bekijk in github</a>
+          <a class="singleLink" href="#"><img src="images/external-link.svg" alt="">Changelog</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

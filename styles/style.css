@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  /* Headings */
+  /* font "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Arial", sans-serif */
+  --utrecht-heading-1-font-size: 1.5rem;
+  --utrecht-heading-1-font-weight:	700;	
+  --utrecht-heading-1-line-height: 1.25;
+
+  --utrecht-heading-2-font-size: 1.25rem;
+  --utrecht-heading-2-font-weight:	700;	
+  --utrecht-heading-2-line-height: 1.25;
+
+  --utrecht-heading-3-font-size: 1.25rem;
+  --utrecht-heading-3-font-weight:	400;	
+  --utrecht-heading-3-line-height: 1.25;
+
+  /* Spacing */
+  --statuslabel-space: 0.5em;
+  --primary-space: 1em;
+  --secondary-space: 2em;
+  --tertiary-space: 5em;
+}
+
+.headingContainer > p {
+  margin-block: var(--primary-space);
+}
+
+/* Start Heading */
+.headingContainer {
+  margin-inline: var(--primary-space);
+}
+
+.statusLabel{
+  background-color: black;
+  color: white;
+  padding: var(--statuslabel-space);
+}
+
+.bold {
+  font-weight: bold;
+}
+/* End heading */
+
+/* Start codeContainer */
+.codeContainer {
+  margin-inline: var(--primary-space);
+}
+
+.tabs {
+  overflow: hidden;
+  border-bottom: 1px solid black;
+}
+
+.tabs button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tabs button:hover {
+  background-color: #ddd;
+  border-bottom: 2px solid #ddd;
+  transition: none;
+}
+
+.tabs button.active {
+  border-bottom: 2px solid black;
+}
+
+.tabs select {
+  padding: 1em;
+  border-left: 4px solid green;
+  width: 100%;
+}
+
+.tablinks {
+  display: none;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.tabsWrapper{
+  margin-top: var(--primary-space);
+}
+
+.buttonTab {
+  border: 1px solid #ccc;
+  padding: 5em;
+  text-align: center;
+}
+
+.utrecht-button {
+  padding: var(--primary-space);
+  border: solid 1px #ccc;
+  background: black;
+  color: white;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.codeTab {
+  background-color: black;
+  color: white;
+  padding: var(--primary-space);
+  position: relative;
+}
+
+.npmTab {
+  background-color: #EAEAEA;
+  color: black;
+  padding: var(--primary-space);
+  margin-top: var(--primary-space);
+  position: relative;
+}
+
+.codeTab button, 
+.npmTab button {
+  position: absolute;
+  right: var(--statuslabel-space);
+  bottom: var(--statuslabel-space);
+  font-size: 1em;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5em;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.npmTab button {
+  color: black;
+  background: rgba(255, 255, 255);
+}
+
+.linksTab {
+  display: flex;
+  margin-top: var(--primary-space);
+}
+
+.linksTab a {
+  display: flex;
+  align-items: center;
+  margin-right: var(--primary-space);
+  color: black;
+}
+
+.linksTab a:last-of-type {
+  margin-right: 0;
+}
+
+.linksTab a img {
+  display: none;
+}
+
+/* End codeContainer */
+
+@media screen and (min-width: 768px) {
+  .linksTab > a > img {
+    display: block;
+  }
+  .tabs select {
+    display: none;
+  }
+  .tablinks {
+    display: block;
+  }
+}
+
