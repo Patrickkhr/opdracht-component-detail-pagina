@@ -4,9 +4,9 @@
 
 ## Inhoudsopgave
 
-[1. Opdrachtgever](https://github.com/Patrickkhr/opdracht-component-detail-pagina?tab=readme-ov-file#opdrachtgever)
-[2. Ontwerp](https://github.com/Patrickkhr/opdracht-component-detail-pagina?tab=readme-ov-file#ontwerp)
-[3. Kenmerken en belangrijke onderdelen](https://github.com/Patrickkhr/opdracht-component-detail-pagina?tab=readme-ov-file#kenmerken-en-belangrijke-onderdelen)
+[1. Opdrachtgever](https://github.com/Patrickkhr/opdracht-component-detail-pagina?tab=readme-ov-file#opdrachtgever)  
+[2. Ontwerp](https://github.com/Patrickkhr/opdracht-component-detail-pagina?tab=readme-ov-file#ontwerp)  
+[3. Kenmerken en belangrijke onderdelen](https://github.com/Patrickkhr/opdracht-component-detail-pagina?tab=readme-ov-file#kenmerken-en-belangrijke-onderdelen)  
 [4. Checklist](https://github.com/Patrickkhr/opdracht-component-detail-pagina?tab=readme-ov-file#checklist)
 
 
