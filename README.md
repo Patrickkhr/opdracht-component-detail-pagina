@@ -1,6 +1,14 @@
 # Component detail pagina Patrick
 
-<img width="942" alt="image" src="https://github.com/Patrickkhr/opdracht-component-detail-pagina/assets/143999685/1aacb095-2782-4f37-a0b1-45a932736a3f">
+![image](https://github.com/Patrickkhr/opdracht-component-detail-pagina/assets/143999685/5d758d44-d412-4e35-8009-a10c89b867a4)
+
+## Inhoudsopgave
+
+[1. Opdrachtgever](https://github.com/Patrickkhr/opdracht-component-detail-pagina?tab=readme-ov-file#opdrachtgever)
+[2. Ontwerp](https://github.com/Patrickkhr/opdracht-component-detail-pagina?tab=readme-ov-file#ontwerp)
+[3. Kenmerken en belangrijke onderdelen](https://github.com/Patrickkhr/opdracht-component-detail-pagina?tab=readme-ov-file#kenmerken-en-belangrijke-onderdelen)
+[4. Checklist](https://github.com/Patrickkhr/opdracht-component-detail-pagina?tab=readme-ov-file#checklist)
+
 
 ### Opdrachtgever
 - Bedrijf: Frameless
