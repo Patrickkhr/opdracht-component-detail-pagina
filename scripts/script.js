@@ -1,3 +1,32 @@
+document.addEventListener('DOMContentLoaded', function() {
+  // Add event listeners to tab buttons
+  var tabButtons = document.querySelectorAll('.tablinks');
+  tabButtons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+      var tabName = button.getAttribute('data-tab');
+      openTab(event, tabName);
+    });
+  });
+  
+  // Add event listener to select element
+  var tabSelector = document.getElementById('tabSelector');
+  tabSelector.addEventListener('change', function(event) {
+    var tabName = event.target.value;
+    openTab(event, tabName);
+  });
+  
+  // Add event listeners to copy buttons
+  var copyButtons = document.querySelectorAll('.copyButton');
+  copyButtons.forEach(function(copyButton) {
+    copyButton.addEventListener('click', function(event) {
+      var tabId = copyButton.closest('.tabcontent').id;
+      var isCodeTab = copyButton.closest('.codeTab') !== null;
+      var selector = '#' + tabId + (isCodeTab ? ' .codeTab code' : ' .npmTab .npmCopy');
+      copyToClipboard(selector, copyButton);
+    });
+  });
+});
+
 function openTab(evt, tabName) {
   var i, tabscontent, tablinks;
   tabscontent = document.getElementsByClassName("tabcontent");
@@ -35,20 +64,22 @@ function copyToClipboard(selector, button) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  let button = document.querySelector("#codeJSON button");
-
-  button.addEventListener("click", function() {
-    let codeTab = this.closest('.codeTab'); // Find the closest parent with the class 'codeTab'
+  let jsonButton = document.querySelector(".jsonTab button");
+  
+  jsonButton.addEventListener("click", function() {
+    let codeTab = document.querySelector("#codeJSON");
+    let section = codeTab.closest('section');
     let linkText = this.textContent.toUpperCase();
 
-    if (linkText === "BEKIJK MEER") {
-      linkText = "Bekijk minder";
+    if (linkText === "TOON ALLE CODE") {
+      linkText = "Toon minder code";
       codeTab.classList.remove("hideContent");
       codeTab.classList.add("showContent");
     } else {
-      linkText = "Bekijk meer";
+      linkText = "Toon alle code";
       codeTab.classList.remove("showContent");
       codeTab.classList.add("hideContent");
+      section.scrollIntoView({ behavior: 'smooth' });
     }
 
     this.textContent = linkText;

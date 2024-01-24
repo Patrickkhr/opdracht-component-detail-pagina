@@ -2,12 +2,31 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Arial", sans-serif;
 }
 
 :root {
 
+  /* Primaire kleuren */
+  --rood: #cc0000;
+  --geel: #ffcc00;
+  --blauw: #006dff;
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+
+  /* Secundaira kleuren */
+  --paars: #762cd1;
+  --magenta: #f02198;
+  --oranje: #ff6e00;
+  --lime: #99d000;
+  --groen: #32ab27;
+  --cyaan: #009ed4;
+  --marineblauw: #1c4181;
+  --bruin: #ad643b;
+  --grijs: #757575;
+
+
   /* Headings */
-  /* font "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Arial", sans-serif */
   --utrecht-heading-1-font-size: 1.5rem;
   --utrecht-heading-1-font-weight:	700;	
   --utrecht-heading-1-line-height: 1.25;
@@ -20,11 +39,43 @@
   --utrecht-heading-3-font-weight:	400;	
   --utrecht-heading-3-line-height: 1.25;
 
+  --utrecht-heading-4-font-size: 1.125rem;
+  --utrecht-heading-4-font-weight:	400;	
+  --utrecht-heading-4-line-height: 1.5;
+
+  --utrecht-heading-5-font-size: 0.875rem;
+  --utrecht-heading-5-font-weight:	400;	
+  --utrecht-heading-5-line-height: 1.5;
+
   /* Spacing */
   --statuslabel-space: 0.5em;
   --primary-space: 1em;
   --secondary-space: 2em;
   --tertiary-space: 5em;
+}
+
+h1 {
+  font-size: var(--utrecht-heading-1-font-size);
+  font-weight: var(--utrecht-heading-1-font-weight);
+  line-height: var(--utrecht-heading-1-line-height);
+}
+
+h2 {
+  font-size: var(--utrecht-heading-2-font-size);
+  font-weight: var(--utrecht-heading-2-font-weight);
+  line-height: var(--utrecht-heading-2-line-height);
+}
+
+h3 {
+  font-size: var(--utrecht-heading-3-font-size);
+  font-weight: var(--utrecht-heading-3-font-weight);
+  line-height: var(--utrecht-heading-3-line-height);
+}
+
+h4 {
+  font-size: var(--utrecht-heading-4-font-size);
+  font-weight: var(--utrecht-heading-4-font-weight);
+  line-height: var(--utrecht-heading-4-line-height);
 }
 
 section {
@@ -36,21 +87,83 @@ section > h2, h3, h4 {
   margin-block: var(--primary-space);
 }
 
-/* Start Heading */
+h2 + p,
+h3 + p,
+h4 + p {
+  margin-block: 1em;
+}
 
+nav {
+  border-bottom: 1px solid black;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+nav li {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: var(--primary-space);
+}
+
+nav li.active {
+  border-bottom: 2px solid black;
+}
+
+nav li:first-of-type {
+  width: 100%;
+}
+
+nav li:first-of-type::before {
+  background-color: var(--primary-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: var(--statuslabel-space);
+  content: "";
+}
+
+nav li:last-of-type,
+nav li:nth-last-of-type(2) {
+  float: right;
+}
+
+nav a {
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav li:last-of-type a,
+nav li:nth-last-of-type(2) a {
+  padding: 0;
+}
+
+
+nav a img {
+  width: 60px;
+  height: 40px;
+}
+
+/* Start Heading */
 .headingContainer p{
   margin-block: var(--primary-space);
 }
 
 .statusLabel{
-  background-color: black;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   padding: var(--statuslabel-space);
   display: inline-block;
-}
-
-.bold {
-  font-weight: bold;
 }
 /* End heading */
 
@@ -67,14 +180,12 @@ section > h2, h3, h4 {
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  transition: 0.3s;
   font-size: 17px;
 }
 
 .tabs button:hover {
   background-color: #ddd;
   border-bottom: 2px solid #ddd;
-  transition: none;
 }
 
 .tabs button.active {
@@ -83,12 +194,16 @@ section > h2, h3, h4 {
 
 .tabs select {
   padding: 1em;
-  border-left: 4px solid green;
+  border-left: 4px solid var(--groen);
   width: 100%;
 }
 
 .tablinks {
   display: none;
+}
+
+.tablinks:focus-visible {
+  border: 2px solid var(--blauw); /* Change the color to your preferred focus color */
 }
 
 .tabcontent {
@@ -103,15 +218,15 @@ section > h2, h3, h4 {
   border: 1px solid #ccc;
   padding: 5em;
   text-align: center;
+  background-color: #EAEAEA;
 }
 
 .utrecht-button {
   padding: var(--primary-space);
-  border: solid 1px #ccc;
-  background: black;
-  color: white;
+  border: solid 1px 	hsl(0 0% 40%);
+  border-radius: var(--statuslabel-space);
+  background: transparent;
   font-size: 1em;
-  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -120,6 +235,7 @@ section > h2, h3, h4 {
   border: 1px solid #ccc;
   position: relative;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.10) 0 1px 3px 0;
 }
 
 .npmTab {
@@ -171,11 +287,12 @@ section > h2, h3, h4 {
 table {
   border-collapse: collapse;
   width: 100%;
+  font-size: 12px;
 }
 
 tbody {
   border: 1px solid hsla(203, 50%, 30%, 0.15);;
-  filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.10));
+  box-shadow: rgba(0, 0, 0, 0.10) 0 1px 3px 0;
 }
 
 tbody tr {
@@ -200,6 +317,28 @@ td, th {
   margin-block: var(--primary-space);
 }
 
+.jsonTab {
+  background-color: #EAEAEA;
+  color: black;
+  padding: var(--statuslabel-space);
+  position: relative;
+}
+
+.jsonTab button {
+  font-size: 1em;
+  background: rgb(234 234 234);
+  padding: 0.5em;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+}
+
+.jsonTab button::before {
+  content: url(../images/chevron-down.svg);
+}
+
 .hideContent {
   overflow: hidden;
   line-height: 1em;
@@ -220,8 +359,7 @@ td, th {
 
 .card {
   display: grid;
-  border: 1px solid black;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .card img {
@@ -245,8 +383,114 @@ ul, ol {
 
 /* End designtoken Container */
 
+/* Start aanvullende informatie container */
+
+.height{
+  height: 100vh;
+}
+
+details {
+  padding: 0.5em 0.5em 0;
+  margin-bottom: var(--primary-space);
+  position: relative;
+}
+
+summary {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+details > summary {
+  list-style: none;
+}
+
+hr {
+  position: absolute;
+  height: 100%;
+  left: 4.8%;
+  top: 20%;
+  margin: 0;
+  border: none;
+  border-left: 2px solid #000; /* Adjust thickness and color as needed */
+}
+
+summary::after {
+  margin-left: var(--statuslabel-space);
+  content: " ▼";
+  text-decoration: none;
+}
+
+details[open] summary:after {
+  content: " ▲";
+}
+
+details[open] {
+  margin-bottom: var(--primary-space);
+}
+
+details[open] summary {
+  margin-bottom: var(--primary-space)
+}
+
+details:nth-of-type(1) summary::before {
+  content: "1";
+}
+
+details:nth-of-type(2) summary::before {
+  content: "2";
+}
+
+details:nth-of-type(3) summary::before {
+  content: "3";
+}
+
+details:nth-of-type(4) summary::before {
+  content: "4";
+}
+
+summary::before {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  margin-right: var(--statuslabel-space);
+}
+
+.inputWrapper {
+  display: grid;
+  margin-inline: var(--secondary-space);
+}
+
+
+/* End aanvullende informatie container */
+
 
 @media screen and (min-width: 768px) {
+  nav li {
+    flex-direction: row;
+    width: unset;
+    margin-top: unset;
+  }
+
+  nav li:last-of-type a,
+  nav li:nth-last-of-type(2) a {
+    margin-top: 10px;
+  }
+
+  section {
+    max-width: 880px;
+    margin: auto;
+    padding: var(--primary-space);
+  }
+
   .linksTab > a::before {
     display: block;
     content: url("../images/external-link.svg") ;
@@ -257,5 +501,17 @@ ul, ol {
   .tablinks {
     display: block;
   }
+  hr {
+    left: 1.6%;
+  }
+  table {
+    font-size: unset;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  nav li:first-of-type {
+    width: unset;
+}
 }
 

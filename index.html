@@ -12,6 +12,21 @@
 
 <body>
 
+  <nav>
+    <ul>
+      <li><a href="#"><b>NL DESIGN  SYSTEM</b></a></li>
+      <li class=""><a href="#">Home</a></li>
+      <li class=""><a href="#">Meedoen</a></li>
+      <li class=""><a href="#">Richtlijnen</a></li>
+      <li class="active"><a href="#">componenten</a></li>
+      <li><a href="#">Voorbeelden</a></li>
+      <li><a href="#">Onderzoek</a></li>
+      <li><a href="#">Project</a></li>
+      <li><a href="#"><img src="/images/search-icon.svg"></a></li>
+      <li><a href="#"><img src="/images/github-icon.svg"></a></li>
+    </ul>
+  </nav>
+
   <section class="headingContainer">
     <h1>Button</h1>
     <p><span class="statusLabel">Community</span></p>
@@ -24,13 +39,13 @@
   <section class="codeContainer">
     <h2>Voorbeeld</h2>
     <div class="tabs">
-      <button class="tablinks active" onclick="openTab(event, 'CSS')">CSS</button>
-      <button class="tablinks" onclick="openTab(event, 'HTML')">HTML</button>
-      <button class="tablinks" onclick="openTab(event, 'Webcomponent')">Webcomponent</button>
-      <button class="tablinks" onclick="openTab(event, 'Vue')">Vue</button>
-      <button class="tablinks" onclick="openTab(event, 'React')">React</button>
-      <button class="tablinks" onclick="openTab(event, 'Figma')">Figma</button>
-      <select onchange="openTab(event, this.value)">
+      <button class="tablinks active" data-tab="CSS">CSS</button>
+      <button class="tablinks" data-tab="HTML">HTML</button>
+      <button class="tablinks" data-tab="Webcomponent">Webcomponent</button>
+      <button class="tablinks" data-tab="Vue">Vue</button>
+      <button class="tablinks" data-tab="React">React</button>
+      <button class="tablinks" data-tab="Figma">Figma</button>
+      <select id="tabSelector">
         <option value="CSS">CSS</option>
         <option value="HTML">HTML</option>
         <option value="Webcomponent">Webcomponent</option>
@@ -47,13 +62,13 @@
         </div>
         <div class="codeTab">
           <pre><code>&lt;button class="utrecht-button" type="button"&gt;
-            label
-          &lt;/button&gt;</code></pre>
-          <button onclick="copyToClipboard('#CSS .codeTab code', this)">Kopieer</button>
+   label
+&lt;/button&gt;</code></pre>
+          <button class="copyButton">Kopieer</button>
         </div>
         <div class="npmTab">
           <p class="npmCopy">npm install @NLDS Button</p>
-          <button onclick="copyToClipboard('#CSS .npmTab .npmCopy', this)">Kopieer</button>
+          <button class="copyButton">Kopieer</button>
         </div>
         <div class="linksTab">
           <a href="#">Bekijk in storybook</a>
@@ -68,13 +83,13 @@
         </div>
         <div class="codeTab">
           <pre><code>&lt;button class="utrecht-button" type="button"&gt;
-            label1
-          &lt;/button&gt;</code></pre>
-          <button onclick="copyToClipboard('#HTML .codeTab code', this)">Kopieer</button>
+   label1
+&lt;/button&gt;</code></pre>
+          <button class="copyButton">Kopieer</button>
         </div>
         <div class="npmTab">
           <p class="npmCopy">npm install @NLDS Button1</p>
-          <button onclick="copyToClipboard('#HTML .npmTab .npmCopy', this)">Kopieer</button>
+          <button class="copyButton">Kopieer</button>
         </div>
         <div class="linksTab">
           <a href="#">Bekijk in storybook</a> 
@@ -89,13 +104,13 @@
         </div>
         <div class="codeTab">
           <pre><code>&lt;button class="utrecht-button" type="button"&gt;
-            label2
-          &lt;/button&gt;</code></pre>
-          <button onclick="copyToClipboard('#Webcomponent .codeTab code', this)">Kopieer</button>
+   label2
+&lt;/button&gt;</code></pre>
+          <button class="copyButton">Kopieer</button>
         </div>
         <div class="npmTab">
           <p class="npmCopy">npm install @NLDS Button2</p>
-          <button onclick="copyToClipboard('#Webcomponent .npmTab .npmCopy', this)">Kopieer</button>
+          <button class="copyButton">Kopieer</button>
         </div>
         <div class="linksTab">
           <a href="#">Bekijk in storybook</a>
@@ -110,13 +125,13 @@
         </div>
         <div class="codeTab">
           <pre><code>&lt;button class="utrecht-button" type="button"&gt;
-            label3
-          &lt;/button&gt;</code></pre>
-          <button onclick="copyToClipboard('#Vue .codeTab code', this)">Kopieer</button>
+   label3
+&lt;/button&gt;</code></pre>
+          <button class="copyButton">Kopieer</button>
         </div>
         <div class="npmTab">
           <p class="npmCopy">npm install @NLDS Button3</p>
-          <button onclick="copyToClipboard('#Vue .npmTab .npmCopy', this)">Kopieer</button>
+          <button class="copyButton">Kopieer</button>
         </div>
         <div class="linksTab">
           <a href="#">Bekijk in storybook</a>
@@ -131,13 +146,13 @@
         </div>
         <div class="codeTab">
           <pre><code>&lt;button class="utrecht-button" type="button"&gt;
-            label4
-          &lt;/button&gt;</code></pre>
-          <button onclick="copyToClipboard('#React .codeTab code', this)">Kopieer</button>
+   label4
+&lt;/button&gt;</code></pre>
+          <button class="copyButton">Kopieer</button>
         </div>
         <div class="npmTab">
           <p class="npmCopy">npm install @NLDS Button4</p>
-          <button onclick="copyToClipboard('#React .npmTab .npmCopy', this)">Kopieer</button>
+          <button class="copyButton">Kopieer</button>
         </div>
         <div class="linksTab">
           <a href="#">Bekijk in storybook</a>
@@ -152,13 +167,13 @@
         </div>
         <div class="codeTab">
           <pre><code>&lt;button class="utrecht-button" type="button"&gt;
-            label5
-          &lt;/button&gt;</code></pre>
-          <button onclick="copyToClipboard('#Figma .codeTab code', this)">Kopieer</button>
+   label5
+&lt;/button&gt;</code></pre>
+          <button class="copyButton">Kopieer</button>
         </div>
         <div class="npmTab">
           <p class="npmCopy">npm install @NLDS Button5</p>
-          <button onclick="copyToClipboard('#Figma .npmTab .npmCopy', this)">Kopieer</button>
+          <button class="copyButton">Kopieer</button>
         </div>
         <div class="linksTab">
           <a href="#">Bekijk in storybook</a>
@@ -210,7 +225,6 @@
   <section class="designtokenContainer">
     <h2>Design tokens</h2>
     <p>Korte beschrijving over design tokens. <a href="#">Lees meer over design tokens</a></p>
-    <button id="copyJSON" class="copyJSON">Kopieer JSON</button>
     <div id="codeJSON" class="codeTab hideContent">
       <pre>{
   "utrecht": {
@@ -363,7 +377,10 @@
     }
   }
 }</pre>
-      <button >Bekijk meer</button>
+      <button id="copyJSON" class="">Kopieer JSON</button>
+    </div>
+    <div class="jsonTab">
+      <button>Toon alle code</button>
     </div>
   </section>
 
@@ -392,14 +409,14 @@
           <img src="#" alt="card">
           <div>
             <h4>Doen</h4>
-            <p>Sukje over wat je moet doen</p>
+            <p>Stukje over wat je moet doen</p>
           </div>
         </article>
         <article class="card">
           <img src="#" alt="card">
           <div>
             <h4>Niet doen</h4>
-            <p>Sukje over wat je niet moet doen</p>
+            <p>Stukje over wat je niet moet doen</p>
           </div>
         </article>
       </div>
@@ -463,7 +480,7 @@
     <p>Stuk over privacy.</p>
   </section>
 
-  <section>
+  <section class="height">
     <h2>Aanvullende informatie</h2>
     <h3>Onderzoek</h3>
     <p>Heb jij onderzoek beschikbaar <a href="#">Deel je onderzoek met het NL Design System</a></p>
@@ -472,6 +489,80 @@
       <li><a href="#">Link naar onderzoek</a></li>
       <li><a href="#">Link naar onderzoek</a></li>
     </ul>
+
+    <h3>Estafette status</h3>
+    <p>De status van het button component is momenteel: Community. <a href="#">Meer informatie over het estafettemodel</a></p>
+    <details>
+      <summary>Help wanted (12 van 12)</summary>
+      <div class="inputWrapper">
+        <div>
+          <input type="checkbox" name="chbox" checked="checked" value="disabled" disabled /> <label>Label</label>
+        </div>
+        <div>
+          <input type="checkbox" name="chbox" checked="checked" value="disabled" disabled /> <label>Label</label>
+        </div>
+        <div>
+          <input type="checkbox" name="chbox" checked="checked" value="disabled" disabled /> <label>Label</label>
+        </div>
+        <div>
+          <input type="checkbox" name="chbox" checked="checked" value="disabled" disabled /> <label>Label</label>
+        </div>
+      </div>
+      <hr>
+    </details>
+    <details>
+      <summary>Community (7 van 12)</summary>
+      <div class="inputWrapper">
+        <div>
+          <input type="checkbox" name="chbox" checked="checked" value="disabled" disabled /> <label>Label</label>
+        </div>
+        <div>
+          <input type="checkbox" name="chbox" checked="checked" value="disabled" disabled /> <label>Label</label>
+        </div>
+        <div>
+          <input type="checkbox" name="chbox" checked="checked" value="disabled" disabled /> <label>Label</label>
+        </div>
+        <div>
+          <input type="checkbox" name="chbox" checked="checked" value="disabled" disabled /> <label>Label</label>
+        </div>
+      </div>
+      <hr>
+    </details>
+    <details>
+      <summary>Candidate (0 van 12)</summary>
+      <div class="inputWrapper">
+        <div>
+          <input type="checkbox" name="chbox" checked="checked" value="disabled" disabled /> <label>Label</label>
+        </div>
+        <div>
+          <input type="checkbox" name="chbox" checked="checked" value="disabled" disabled /> <label>Label</label>
+        </div>
+        <div>
+          <input type="checkbox" name="chbox" checked="checked" value="disabled" disabled /> <label>Label</label>
+        </div>
+        <div>
+          <input type="checkbox" name="chbox" checked="checked" value="disabled" disabled /> <label>Label</label>
+        </div>
+      </div>
+      <hr>
+    </details>
+    <details>
+      <summary>Hall of Fame (0 van 12)</summary>
+      <div class="inputWrapper">
+        <div>
+          <input type="checkbox" name="chbox" checked="checked" value="disabled" disabled /> <label>Label</label>
+        </div>
+        <div>
+          <input type="checkbox" name="chbox" checked="checked" value="disabled" disabled /> <label>Label</label>
+        </div>
+        <div>
+          <input type="checkbox" name="chbox" checked="checked" value="disabled" disabled /> <label>Label</label>
+        </div>
+        <div>
+          <input type="checkbox" name="chbox" checked="checked" value="disabled" disabled /> <label>Label</label>
+        </div>
+      </div>
+    </details>
   </section>
 
 </body>
